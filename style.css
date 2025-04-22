@@ -28,7 +28,7 @@ p {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increased spacing slightly */
 }
 
 label {
@@ -46,12 +46,11 @@ textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Important to include padding in width */
-    font-size: 1rem; /* Ensure consistent font size */
-    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions */
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Added focus styles */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
@@ -62,10 +61,10 @@ textarea:focus {
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
 }
 
-/* Honeypot field styling - hide it visually and from tab order */
+/* Honeypot field styling */
 .honeypot {
     position: absolute;
     left: -5000px;
@@ -75,8 +74,13 @@ textarea {
     overflow: hidden;
 }
 
+/* reCAPTCHA alignment */
+.g-recaptcha {
+    margin-bottom: 10px; /* Space below reCAPTCHA */
+}
+
 button[type="submit"] {
-    display: inline-flex; /* Align text and spinner */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -88,8 +92,8 @@ button[type="submit"] {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 20px; /* Add some space above the button */
-    position: relative; /* Needed for spinner positioning if using absolute */
+    margin-top: 10px; /* Adjusted margin */
+    position: relative;
 }
 
 button[type="submit"]:hover {
@@ -107,10 +111,10 @@ button[type="submit"]:disabled {
     border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     border-top-color: #fff;
-    width: 1em; /* Relative to font size */
+    width: 1em;
     height: 1em;
     animation: spin 1s ease-infinite;
-    margin-left: 10px; /* Space between text and spinner */
+    margin-left: 10px;
 }
 
 @keyframes spin {
@@ -119,17 +123,13 @@ button[type="submit"]:disabled {
 
 /* Error message styling */
 .error-message {
-    color: #dc3545; /* Red color for errors */
+    color: #dc3545;
     font-size: 0.875em;
     margin-top: 4px;
-    display: none; /* Hidden by default */
-}
-input:invalid, textarea:invalid {
-    /* You could add styles for invalid fields after validation attempts, e.g., red border */
-    /* border-color: #dc3545; */
+    display: none;
 }
 
-
+/* Response Message Area Styling */
 .response-message {
     margin-top: 20px;
     padding: 15px;
@@ -150,7 +150,7 @@ input:invalid, textarea:invalid {
     border: 1px solid #f5c6cb;
 }
 
-/* Basic Responsive Example */
+/* Responsive */
 @media (max-width: 600px) {
     .container {
         padding: 20px;
